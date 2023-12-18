@@ -72,10 +72,13 @@ function App() {
     const {
       target: { value },
     } = event;
+
     const valorEnfermedad =
       typeof value === "string" ? value.split(",") : value;
-
+    console.log(valorEnfermedad);
     const entidad = valorEnfermedad.map((a) => entidadFusionada.get(a));
+    console.log(entidad);
+
     setDataEnfermadadApi([...entidad]);
 
     setPersonName(typeof value === "string" ? value.split(",") : value);
